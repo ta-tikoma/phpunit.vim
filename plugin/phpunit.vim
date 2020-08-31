@@ -65,14 +65,14 @@ fun! g:PHPUnit.OpenBuffer(content)
       execute phpunit_win . "wincmd w"
     else
       " split current buffer, with phpunit_buffer
-      execute "rightbelow vertical sb ".g:phpunit_buffer
+      execute "statusListrightbelow vertical sb ".g:phpunit_buffer
     endif
     " well, phpunit_buffer is opened, clear content
     setlocal modifiable
     silent %d
   else
     " there is no phpunit_buffer create new one
-    rightbelow 50vnew
+    rightbelow vnew
     let g:phpunit_buffer=bufnr('%')
   endif
 
