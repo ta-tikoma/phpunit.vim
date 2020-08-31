@@ -108,8 +108,9 @@ endfun
 
 fun! g:PHPUnit.RunCurrentFile()
   let cmd = g:PHPUnit.buildBaseCommand()
-  let cmd = cmd +  [bufname("%")]
-  silent call g:PHPUnit.Run(cmd, bufname("%")) 
+  let file = expand('%')
+  let cmd = cmd +  [file]
+  silent call g:PHPUnit.Run(cmd, file) 
 endfun
 fun! g:PHPUnit.RunTestCase(filter)
   let cmd = g:PHPUnit.buildBaseCommand()
