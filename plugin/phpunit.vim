@@ -108,7 +108,7 @@ endfun
 
 fun! g:PHPUnit.RunCurrentFile()
   let cmd = g:PHPUnit.buildBaseCommand()
-  let file = expand('%')
+  let file = fnamemodify(expand("%"), ":~:.")
   let cmd = cmd +  [file]
   silent call g:PHPUnit.Run(cmd, file) 
 endfun
