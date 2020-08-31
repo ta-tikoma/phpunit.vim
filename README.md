@@ -1,12 +1,19 @@
 # phpunit.vim
 
+## Fork of https://github.com/c9s/phpunit.vim
+
+## Diffs:
+- Remove buff width lock on 50
+- Use relative path of test buff in run command
+
+
 ![phpunit.vim](https://pbs.twimg.com/media/CPwwG-4UcAA-KXs.png:large)
 
 
 ## Install via Vundle
 
 ```vim
-Plugin "c9s/phpunit.vim"
+Plugin "ta-tikoma/phpunit.vim"
 ```
 
 ## Configurations
