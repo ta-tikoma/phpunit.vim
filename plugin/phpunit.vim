@@ -65,7 +65,7 @@ fun! g:PHPUnit.OpenBuffer(content)
       execute phpunit_win . "wincmd w"
     else
       " split current buffer, with phpunit_buffer
-      execute "statusListrightbelow vertical sb ".g:phpunit_buffer
+      execute "rightbelow vertical sb ".g:phpunit_buffer
     endif
     " well, phpunit_buffer is opened, clear content
     setlocal modifiable
@@ -78,7 +78,7 @@ fun! g:PHPUnit.OpenBuffer(content)
 
   file PHPUnit
   " exec 'file Diff-' . file
-  setlocal nobuflisted cursorline nonumber nowrap buftype=nofile filetype=phpunit modifiable bufhidden=hide
+  setlocal nobuflisted cursorline nonumber buftype=nofile filetype=phpunit modifiable bufhidden=hide
   setlocal noswapfile
   silent put=a:content
   "efm=%E%\\d%\\+)\ %m,%CFailed%m,%Z%f:%l,%-G
